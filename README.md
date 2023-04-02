@@ -2,7 +2,7 @@
 
 
 
-![Screenshot](https://github.com/Yougraj/hyprland-dot/blob/main/main.png?raw=true)
+![Screenshot](https://github.com/Yougraj/hyprland-dot/blob/main/main.png)
 
 ## install
 
