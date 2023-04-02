@@ -1,6 +1,8 @@
 # Hyprland
 
-![Screenshot](https://github.com/Yougraj/hyprland-dot/blob/main/main.png)
+
+<img alt="Coding" width="700" src="main.png">
+
 
 ## install
 
