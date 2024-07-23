@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 import json
-import requests
 from datetime import datetime
+
+import requests
 
 WEATHER_CODES = {
     '113': '☀️ ',
@@ -55,19 +56,16 @@ WEATHER_CODES = {
     '395': '❄️ '
 }
 
+location = "Assam, Golaghat, India"
 data = {}
 
-
 weather = requests.get("https://wttr.in/?format=j1").json()
-
 
 def format_time(time):
     return time.replace("00", "").zfill(2)
 
-
 def format_temp(temp):
     return (hour['FeelsLikeF']+"°").ljust(3)
-
 
 def format_chances(hour):
     chances = {
@@ -92,7 +90,6 @@ extrachar = ''
 if tempint > 0 and tempint < 10:
     extrachar = '+'
 
-
 data['text'] = ' '+WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
     " "+extrachar+weather['current_condition'][0]['FeelsLikeF']+"°"
 
@@ -100,6 +97,7 @@ data['tooltip'] = f"<b>{weather['current_condition'][0]['weatherDesc'][0]['value
 data['tooltip'] += f"Feels like: {weather['current_condition'][0]['FeelsLikeF']}°\n"
 data['tooltip'] += f"Wind: {weather['current_condition'][0]['windspeedKmph']}Km/h\n"
 data['tooltip'] += f"Humidity: {weather['current_condition'][0]['humidity']}%\n"
+data['tooltip'] += f"\n<b>Location: {location}</b>\n"
 for i, day in enumerate(weather['weather']):
     data['tooltip'] += f"\n<b>"
     if i == 0:
@@ -114,6 +112,5 @@ for i, day in enumerate(weather['weather']):
             if int(format_time(hour['time'])) < datetime.now().hour-2:
                 continue
         data['tooltip'] += f"{format_time(hour['time'])} {WEATHER_CODES[hour['weatherCode']]} {format_temp(hour['FeelsLikeF'])} {hour['weatherDesc'][0]['value']}, {format_chances(hour)}\n"
-
 
 print(json.dumps(data))
