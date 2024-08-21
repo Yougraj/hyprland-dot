@@ -2,7 +2,9 @@ sw_volume: 100
 audio_device_state:1:PipeWire Sound Server
 audio_device_state:1:Visualizer
 audio_device_state:1:lossless
-state: stop
+state: pause
+current: 34
+time: 230.900000
 random: 0
 repeat: 0
 single: 0
@@ -11,5 +13,61 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:I_Still_Do.mp3
+0:Afterglow.mp3
+1:Again.mp3
+2:All_my_plants_are_dying.mp3
+3:Always_Be.mp3
+4:Baarish_Ka_Asar.mp3
+5:With_You.mp3
+6:Blue.mp3
+7:Blush.mp3
+8:this_is_how_you_fall_in_love.mp3
+9:Head_In_The_Clouds.mp3
+10:Coast.mp3
+11:with_you_for_you.mp3
+12:cold_mess.mp3
+13:100_words.mp3
+14:Confessions_of_a_Bipolar_Mind.mp3
+15:Too_Hot_for_You_to_Hold.mp3
+16:Damage.mp3
+17:I_Forgive_You.mp3
+18:Wake_up_Next_to_You.mp3
+19:I_m_Dreaming_Of_You.mp3
+20:Eenie_Meenie.mp3
+21:Evermore.mp3
+22:everything_everywhere_always.mp3
+23:Five_Miles.mp3
+24:Dopamine.mp3
+25:Gonna_Be.mp3
+26:Ghost_-_Acoustic.mp3
+27:Give_Me_My_Soul_Back.mp3
+28:Gonna Be - Abdon Mech.mp3
+29:Guru-Gee__Nang_Ngei_I_Ni_.mp3
+30:Sky_is_the_Limit.mp3
+31:July__Later_On_.mp3
+32:i_don_t_wanna_know_-_acoustic.mp3
+33:I_Found_Her.mp3
+34:ilym__feat__ROSIE_.mp3
+35:Just_to_Be_With_You.mp3
+36:Kasoor.mp3
+37:Khwaab.mp3
+38:Kids_in_Love.mp3
+39:Like_My_Father.mp3
+40:Little_Bit_More.mp3
+41:Meant_To_Be.mp3
+42:Midnight_Disco.mp3
+43:Missing_Out.mp3
+44:Nothing_s_Missing.mp3
+45:Pause.mp3
+46:for_your_time_-_Audiotree_Live_Version.mp3
+47:room_for_you.mp3
+48:Sally_Forth.mp3
+49:The_Best_Thing.mp3
+50:songs_about_you.mp3
+51:the_world_could_end_with_you.mp3
+52:We_re_Getting_Older.mp3
+53:Weather_Any_Storm.mp3
+54:Yellow_Paper_Daisy.mp3
+55:You_Are_Amazing.mp3
+56:Shoulder.mp3
 playlist_end

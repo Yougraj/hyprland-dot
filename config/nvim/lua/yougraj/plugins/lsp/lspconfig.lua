@@ -16,6 +16,9 @@ return {
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+    -- lsp utils
+    local util = require("lspconfig.util")
+
     local keymap = vim.keymap -- for conciseness
 
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -112,6 +115,21 @@ return {
         lspconfig["emmet_ls"].setup({
           capabilities = capabilities,
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+        })
+      end,
+      ["rust_analyzer"] = function()
+        -- configure rust language server
+        lspconfig["rust_analyzer"].setup({
+          capabilities = capabilities,
+          filetypes = { "rust" },
+          root_dir = util.root_pattern("Cargo.toml"),
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = {
+                allFeatures = true,
+              },
+            },
+          },
         })
       end,
       ["lua_ls"] = function()
