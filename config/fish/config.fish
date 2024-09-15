@@ -29,7 +29,16 @@ abbr .5 'cd ../../../../..'
 abbr mkdir 'mkdir -p'
 abbr v 'nvim'
 
-export PATH="$PATH/var/lib/snapd/snap/bin/flutter:$PATH"
 export PATH="$PATH:/var/lib/snapd/snap/bin"
-export PATH="/usr/bin/flutter/bin:$PATH"
+export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_NDK_ROOT="$HOME/Android/Sdk/android-ndk-r26d-linux.zip"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH:/usr/bin/go"
+
+
+set -x SPOTIPY_CLIENT_ID "b170b33e7c2e45768aaf8454ca721747"
+set -x SPOTIPY_CLIENT_SECRET "beb94c8bf5934219a29c55ef1be17ae7"
